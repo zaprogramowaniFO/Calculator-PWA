@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+html {
+    touch-action: manipulation;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(24,88,138,1) 50%, rgba(0,212,255,1) 100%);
+    min-height: 100vh;
+    margin: 0; 
+}
+
+.button {
+    background-color: rgb(169, 169, 169);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+.button__op {
+    background-color: gray;
+}
+
+
+.button:hover {
+    background-color: orangered;
+}
+
+.button__clr {
+    grid-column: span 3;
+    background-color: orange;
+}
+
+.button__sum {
+    grid-column: span 2;
+    background-color: orange;
+}
+
+
+
+.calculator {
+    background-color: rgb(31, 29, 29);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.header__title {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 3em; 
+}
+
+.phone {
+    display: none;
+}
+.screen {
+    grid-column: span 4;
+    border: none;
+    border-radius: 10px;
+    font-size: 2em;
+    padding: 10px;
+    background-color: honeydew;
+    margin: 15px 0;
+    text-align: end;
+    font-family: "Orbitron", sans-serif;
+}
+
+@media only screen and (max-width: 450px) and (orientation: portrait) {
+    .header__title {
+        display: none;
+    }
+
+    .calculator {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+        overflow: auto;
+    }
+    .screen {
+        
+        padding: 10px;
+        background-color: honeydew;
+        margin: 15px 0;
+        text-align: end;
+    }
+}
+
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+    .main {
+        display: none;
+    }
+
+    .header__title {
+        display: none;
+    }
+
+    .phone {
+        display: block;
+        color: white;
+        font-size: 4em;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
