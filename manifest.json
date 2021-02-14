@@ -7,8 +7,8 @@
 	"theme_color": "rgba(24,88,138,1)",
 	"display": "standalone",
 	"orientation": "portrait",
-	"scope": "/",
-    "start_url": "/",
+	"scope": "/Calculator-PWA/",
+    "start_url": "/Calculator-PWA/",
 	"icons": [
 		{
 			"src": "images/icon/android-icon-192x192.png",
